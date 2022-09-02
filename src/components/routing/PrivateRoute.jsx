@@ -3,7 +3,7 @@ import { useNavigate, Navigate, Outlet } from "react-router-dom";
 
 const PrivateRoute = () => {
   // const [auth, setAuth] = useState(localStorage.getItem("authToken"));
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
 
   console.log("auth is: ", auth);
 
@@ -19,9 +19,9 @@ const PrivateRoute = () => {
     //   console.log("i am inside if block");
     //   setAuth(fla);
     // }
-    // if (localStorage.getItem("authToken")) setAuth(true);
+    if (localStorage.getItem("authToken")) setAuth(true);
 
-    if (!localStorage.getItem("authToken")) setAuth(false);
+    // if (!localStorage.getItem("authToken")) setAuth(false);
   }, []);
 
   // const auth = useAuth();

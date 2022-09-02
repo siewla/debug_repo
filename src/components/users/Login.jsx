@@ -10,11 +10,13 @@ const Login = () => {
   // const [token, setToken] = useState(localStorage.getItem("authToken"));
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (localStorage.getItem("authToken")) {
-      navigate("/");
-    }
-  }, []);
+  console.log("i im login");
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("authToken")) {
+  //     navigate("/");
+  //   }
+  // }, []);
 
   // if (localStorage.getItem("authToken")) {
   //   console.log("this is working");
